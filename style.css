@@ -1,0 +1,165 @@
+:root {
+  --bg: #0a001a;
+  --primary: #1f0035;
+  --secondary: #2d0050;
+  --accent: #c7940e;
+  --text: #f5f5f5;
+  --card: #140028;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+
+#menu-btn {
+  font-size: 1.8em;
+  cursor: pointer;
+}
+
+#menu {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  background: var(--card);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#menu.active {
+  display: flex;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.mini {
+  font-size: 0.9em;
+  opacity: 0.6;
+}
+
+.btn {
+  background: var(--accent);
+  color: #000;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 15px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--accent);
+}
+
+section {
+  margin-bottom: 80px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: var(--accent);
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(199, 148, 14, 0.2);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card a {
+  text-decoration: none;
+  color: white;
+}
+
+.contato-texto {
+  margin-bottom: 20px;
+}
+
+.socials {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.socials a {
+  color: var(--accent);
+  font-size: 1.5em;
+}
+
+/* DESKTOP */
+@media(min-width: 768px) {
+  #menu {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    background: none;
+  }
+
+  #menu-btn {
+    display: none;
+  }
+
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
