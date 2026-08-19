@@ -1,148 +1,263 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nicole Mendes | Web Designer</title>
-
-  <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/68415d66c2.js" crossorigin="anonymous"></script>
-
-  <!-- Fonte -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-</head>
-
-<body>
-
-<div class="container">
-
-  <header>
-    <h1>Nicole Mendes</h1>
-
-    <i class="fa-solid fa-bars" id="menu-btn"></i>
-
-    <nav id="menu">
-      <a href="#sobre" class="link">Sobre</a>
-      <a href="#servicos" class="link">Serviços</a>
-      <a href="#projetos" class="link">Projetos</a>
-      <a href="#contato" class="link">Contato</a>
-    </nav>
-  </header>
-
-  <!-- HERO -->
-  <section class="hero">
-    <h2>Crio sites que trazem clientes pelo WhatsApp</h2>
-    <p>
-      Olá, sou <strong>Nicole Mendes</strong>. Desenvolvo sites profissionais na Wix
-      focados em atrair clientes e transformar visitas em mensagens.
-    </p>
-
-    <a href="https://wa.me/5589994549682" target="_blank" class="btn">
-      Falar comigo
-    </a>
-
-    <p class="mini">
-      ✔ Sites rápidos | ✔ Design profissional | ✔ Contato direto pelo WhatsApp
-    </p>
-  </section>
-
-  <!-- SOBRE -->
-  <section id="sobre">
-    <h2>Sobre</h2>
-    <p>
-      Sou Nicole Mendes, desenvolvedora de sites especializada em pequenos negócios.
-
-      Meu foco não é só criar sites bonitos, mas sim páginas estratégicas que
-      ajudam você a atrair clientes e aumentar suas vendas.
-
-      Trabalho com a plataforma Wix, criando sites rápidos,
-      responsivos e com integração direta ao WhatsApp.
-
-      Se você quer um site que realmente gera resultado, eu posso te ajudar.
-    </p>
-  </section>
-
-  <!-- SERVIÇOS -->
-  <section id="servicos">
-    <h2>Serviços</h2>
-
-    <div class="projects">
-
-      <div class="card">
-        <h3>Landing Page</h3>
-        <p>Página única focada em conversão e geração de clientes.</p>
-      </div>
-
-      <div class="card">
-        <h3>Site para Negócios</h3>
-        <p>Sites completos para empresas e profissionais locais.</p>
-      </div>
-
-      <div class="card">
-        <h3>WhatsApp Integrado</h3>
-        <p>Botões estratégicos para transformar visitantes em clientes.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- PROJETOS -->
-  <section id="projetos">
-    <h2>Projetos</h2>
-
-    <div class="projects">
-
-      <div class="card">
-        <a href="https://pageonixstudio.wixsite.com/medportal" target="_blank">
-          <h3>Consultório Médico</h3>
-          <p>Landing page focada em agendamentos.</p>
-        </a>
-      </div>
-
-      <div class="card">
-        <a href="https://pageonixstudio.wixsite.com/lookshop" target="_blank">
-          <h3>Loja de Roupas</h3>
-          <p>E-commerce moderno e otimizado.</p>
-        </a>
-      </div>
-
-      <div class="card">
-        <a href="https://pageonixstudio.wixsite.com/nuance-tech" target="_blank">
-          <h3>Portfólio Tech</h3>
-          <p>Identidade visual tecnológica.</p>
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CONTATO -->
-  <section id="contato">
-    <h2>Contato</h2>
-
-    <p class="contato-texto">
-      Quer um site profissional que realmente traga clientes?
-      Me chama no WhatsApp 👇
-    </p>
-
-    <a href="https://wa.me/5589994549682" target="_blank" class="btn">
-      Falar no WhatsApp
-    </a>
-
-    <div class="socials">
-      <a href="https://www.instagram.com/pageonix_studio/"><i class="fa-brands fa-instagram"></i></a>
-      <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-      <a href="mailto:nicolemendes.dev@gmail.com"><i class="fa-regular fa-envelope"></i></a>
-    </div>
-  </section>
-
-</div>
-
-<footer>
-  <p>© 2026 Nicole Mendes</p>
-</footer>
-
-<script src="script.js"></script>
-
-</body>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Portfólio de Nicole Mendes, desenvolvedora full stack."
+    />
+    <title>Nicole Mendes | Desenvolvedora Full Stack</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/68415d66c2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="header container">
+      <a class="brand" href="#inicio">NM<span>.</span></a
+      ><button
+        class="menu-button"
+        id="menu-btn"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <nav id="menu">
+        <a class="link" href="#sobre">Sobre</a
+        ><a class="link" href="#tecnologias">Tecnologias</a
+        ><a class="link" href="#projetos">Projetos</a
+        ><a class="link" href="#servicos">Serviços</a
+        ><a class="link" href="#trajetoria">Formação</a
+        ><a class="nav-contact link" href="#contato">Contato</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero container" id="inicio">
+        <p class="eyebrow"><span></span> DISPONÍVEL PARA NOVOS PROJETOS</p>
+        <div class="hero-grid">
+          <div>
+            <p class="intro">Olá, eu sou Nicole Mendes</p>
+            <h1>Desenvolvedora<br /><em>Full Stack.</em></h1>
+          </div>
+          <div class="hero-copy">
+            <p>
+              Transformo ideias em experiências digitais modernas, funcionais e
+              pensadas para as pessoas.
+            </p>
+            <div class="hero-actions">
+              <a
+                class="button primary"
+                href="https://wa.me/5589994549682"
+                target="_blank"
+                rel="noopener"
+                ><i class="fa-brands fa-whatsapp"></i> Vamos conversar</a
+              ><a class="text-link" href="#projetos"
+                >Ver projetos <i class="fa-solid fa-arrow-down"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="hero-footer">
+          <span>FRONTEND · BACKEND · UI</span
+          ><a href="mailto:nicolemendes.dev@gmail.com"
+            >nicolemendes.dev@gmail.com ↗</a
+          >
+        </div>
+      </section>
+      <section class="section container" id="sobre">
+        <p class="section-label">01 / SOBRE MIM</p>
+        <div class="two-columns">
+          <h2>Código com propósito,<br /><em>design com intenção.</em></h2>
+          <div>
+            <p>
+              Sou uma desenvolvedora full stack em formação, apaixonada por
+              criar soluções que unem tecnologia, clareza e boas experiências.
+            </p>
+            <p>
+              Do conceito ao deploy, construo aplicações escaláveis, responsivas
+              e que resolvem problemas reais.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="section purple" id="tecnologias">
+        <div class="container">
+          <p class="section-label">02 / TECNOLOGIAS</p>
+          <h2>Minha caixa de<br /><em>ferramentas.</em></h2>
+          <div class="skills">
+            <article>
+              <span>01</span>
+              <h3>Frontend</h3>
+              <p>Next.js · React · TypeScript<br />JavaScript · HTML5 · CSS3</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Backend</h3>
+              <p>Node.js · Next.js API<br />Prisma</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Banco de dados</h3>
+              <p>PostgreSQL · MySQL<br />SQLite · phpMyAdmin</p>
+            </article>
+            <article>
+              <span>04</span>
+              <h3>Ferramentas</h3>
+              <p>Git · GitHub · Postman<br />Cloudinary · Railway · Figma</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section container" id="projetos">
+        <p class="section-label">03 / PROJETOS</p>
+        <div class="heading">
+          <h2>Projetos em<br /><em>destaque.</em></h2>
+          <a
+            class="text-link"
+            href="https://github.com/nicole-m0"
+            target="_blank"
+            rel="noopener"
+            >Ver GitHub <i class="fa-brands fa-github"></i
+          ></a>
+        </div>
+        <div class="projects">
+          <a
+            href="https://pageonixstudio.wixsite.com/medportal"
+            target="_blank"
+            rel="noopener"
+            class="project feature"
+            ><div class="art medical">
+              <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+            <p>WEB DESIGN</p>
+            <h3>
+              MedPortal
+              <i class="fa-solid fa-arrow-up-right-from-square"></i></h3></a
+          ><a
+            href="https://pageonixstudio.wixsite.com/lookshop"
+            target="_blank"
+            rel="noopener"
+            class="project"
+            ><div class="art shop">
+              <i class="fa-solid fa-bag-shopping"></i>
+            </div>
+            <p>E-COMMERCE</p>
+            <h3>
+              Look Shop
+              <i class="fa-solid fa-arrow-up-right-from-square"></i></h3></a
+          ><a
+            href="https://pageonixstudio.wixsite.com/nuance-tech"
+            target="_blank"
+            rel="noopener"
+            class="project"
+            ><div class="art tech"><i class="fa-solid fa-code"></i></div>
+            <p>PORTFÓLIO</p>
+            <h3>
+              Nuance Tech
+              <i class="fa-solid fa-arrow-up-right-from-square"></i></h3
+          ></a>
+        </div>
+      </section>
+      <section class="section purple" id="servicos">
+        <div class="container">
+          <p class="section-label">04 / SERVIÇOS</p>
+          <div class="two-columns">
+            <h2>Como posso<br /><em>te ajudar.</em></h2>
+            <div class="service-list">
+              <article>
+                <span>01</span>
+                <div>
+                  <h3>Sites e landing pages</h3>
+                  <p>Páginas modernas, responsivas e orientadas a conversão.</p>
+                </div>
+              </article>
+              <article>
+                <span>02</span>
+                <div>
+                  <h3>Aplicações web</h3>
+                  <p>
+                    Soluções completas com frontend, backend e banco de dados.
+                  </p>
+                </div>
+              </article>
+              <article>
+                <span>03</span>
+                <div>
+                  <h3>Interfaces e protótipos</h3>
+                  <p>
+                    Experiências intuitivas, desenhadas no Figma antes do
+                    código.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section container" id="trajetoria">
+        <p class="section-label">05 / FORMAÇÃO</p>
+        <div class="two-columns">
+          <h2>Construindo uma<br /><em>trajetória sólida.</em></h2>
+          <div class="education">
+            <article>
+              <b>2025</b>
+              <div>
+                <h3>Técnico em Informática</h3>
+                <p>IFPI Campus Oeiras · Conclusão: 2025</p>
+              </div>
+            </article>
+            <article>
+              <b>EM ANDAMENTO</b>
+              <div>
+                <h3>Programação e Desenvolvimento Web</h3>
+                <p>Formação em andamento</p>
+              </div>
+            </article>
+            <article>
+              <b>2023</b>
+              <div>
+                <h3>Técnico em Administração integrado ao Ensino Médio</h3>
+                <p>IFPI Campus Oeiras · Conclusão: 2023</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="contact container" id="contato">
+        <p class="section-label">06 / CONTATO</p>
+        <h2>Vamos criar algo<br /><em>incrível juntas?</em></h2>
+        <p>
+          Tem um projeto, uma oportunidade ou uma ideia? Meu inbox está aberto.
+        </p>
+        <div class="contact-actions">
+          <a
+            class="button primary"
+            href="https://wa.me/5589994549682"
+            target="_blank"
+            rel="noopener"
+            ><i class="fa-brands fa-whatsapp"></i> Chamar no WhatsApp</a
+          ><a class="button outline" href="mailto:nicolemendes.dev@gmail.com"
+            ><i class="fa-regular fa-envelope"></i> Enviar e-mail</a
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="container">
+      <a class="brand" href="#inicio">NM<span>.</span></a>
+      <p>© 2026 Nicole Mendes</p>
+      <a href="https://github.com/nicole-m0" target="_blank" rel="noopener"
+        >GitHub <i class="fa-brands fa-github"></i
+      ></a>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
