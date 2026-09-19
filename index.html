@@ -3,11 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0a0d14" />
     <meta
       name="description"
-      content="Portfólio de Nicole Mendes, desenvolvedora full stack."
+      content="Nicole Mendes: desenvolvedora web, vibe coder e gestora de tráfego pago. Sites, aplicações web e campanhas no Meta Ads."
     />
-    <title>Nicole Mendes | Desenvolvedora Full Stack</title>
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Nicole Mendes | Desenvolvedora Web e Tráfego Pago"
+    />
+    <meta
+      property="og:description"
+      content="Desenvolvimento web, vibe coding e tráfego pago em um só lugar."
+    />
+    <title>Nicole Mendes | Desenvolvedora Web e Tráfego Pago</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0d14'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' font-weight='700' text-anchor='middle' fill='%235b8cff'%3ENM%3C/text%3E%3C/svg%3E"
+    />
+    <script>
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        document.documentElement.classList.add("js-reveal");
+      }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,243 +41,468 @@
     ></script>
   </head>
   <body>
-    <header class="header container">
-      <a class="brand" href="#inicio">NM<span>.</span></a
-      ><button
-        class="menu-button"
-        id="menu-btn"
-        aria-label="Abrir menu"
-        aria-expanded="false"
-      >
-        <i class="fa-solid fa-bars"></i>
-      </button>
-      <nav id="menu">
-        <a class="link" href="#sobre">Sobre</a
-        ><a class="link" href="#tecnologias">Tecnologias</a
-        ><a class="link" href="#projetos">Projetos</a
-        ><a class="link" href="#servicos">Serviços</a
-        ><a class="link" href="#trajetoria">Formação</a
-        ><a class="nav-contact link" href="#contato">Contato</a>
-      </nav>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="header">
+      <div class="header-inner container">
+        <a class="brand" href="#inicio" aria-label="Nicole Mendes, início"
+          >NM<span>.</span></a
+        >
+        <button
+          class="menu-button"
+          id="menu-btn"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="menu"
+        >
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+        <nav id="menu" aria-label="Principal">
+          <a class="link" href="#inicio">Início</a>
+          <a class="link" href="#sobre">Sobre</a>
+          <a class="link" href="#habilidades">Habilidades</a>
+          <a class="link" href="#projetos">Projetos</a>
+          <a class="link" href="#trafego">Tráfego Pago</a>
+          <a class="nav-contact link" href="#contato">Contato</a>
+        </nav>
+      </div>
     </header>
-    <main>
+
+    <main id="conteudo">
+      <!-- INÍCIO -->
       <section class="hero container" id="inicio">
-        <p class="eyebrow"><span></span> DISPONÍVEL PARA NOVOS PROJETOS</p>
-        <div class="hero-grid">
-          <div>
-            <p class="intro">Olá, eu sou Nicole Mendes</p>
-            <h1>Desenvolvedora<br /><em>Full Stack.</em></h1>
-          </div>
-          <div class="hero-copy">
-            <p>
-              Transformo ideias em experiências digitais modernas, funcionais e
-              pensadas para as pessoas.
-            </p>
-            <div class="hero-actions">
-              <a
-                class="button primary"
-                href="https://wa.me/5589994549682"
-                target="_blank"
-                rel="noopener"
-                ><i class="fa-brands fa-whatsapp"></i> Vamos conversar</a
-              ><a class="text-link" href="#projetos"
-                >Ver projetos <i class="fa-solid fa-arrow-down"></i
-              ></a>
-            </div>
+        <div class="hero-text">
+          <p class="eyebrow hero-in">
+            <span class="dot" aria-hidden="true"></span> Disponível para novos
+            projetos
+          </p>
+          <h1 class="hero-in">Nicole <br />Mendes<span class="stop">.</span></h1>
+          <p class="hero-roles hero-in">
+            Desenvolvimento web <b aria-hidden="true">+</b> Tecnologia
+            <b aria-hidden="true">+</b> Tráfego pago
+          </p>
+          <p class="hero-lead hero-in">
+            Faço sites e aplicações web, programo com ajuda de IA e cuido do
+            anúncio que leva as pessoas até eles.
+          </p>
+          <div class="hero-actions hero-in">
+            <a
+              class="button primary"
+              href="https://wa.me/5589994549682"
+              target="_blank"
+              rel="noopener"
+              ><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Falar
+              comigo<span class="sr-only"> no WhatsApp (abre em nova aba)</span></a
+            >
+            <a class="text-link" href="mailto:nicolemendes.dev@gmail.com"
+              >nicolemendes.dev@gmail.com</a
+            >
           </div>
         </div>
-        <div class="hero-footer">
-          <span>FRONTEND · BACKEND · UI</span
-          ><a href="mailto:nicolemendes.dev@gmail.com"
-            >nicolemendes.dev@gmail.com ↗</a
-          >
-        </div>
+        <figure class="hero-photo hero-in">
+          <img
+            src="assets/img/nicole-retrato.jpg"
+            width="1100"
+            height="1305"
+            alt="Retrato em preto e branco de Nicole Mendes, de cabelo comprido, sentada com um blazer escuro."
+            fetchpriority="high"
+          />
+        </figure>
       </section>
+
+      <!-- SOBRE -->
       <section class="section container" id="sobre">
-        <p class="section-label">01 / SOBRE MIM</p>
-        <div class="two-columns">
-          <h2>Código com propósito,<br /><em>design com intenção.</em></h2>
-          <div>
+        <p class="section-label" data-reveal><span>01</span> Sobre</p>
+        <div class="about">
+          <h2 data-reveal>
+            Faço o site e também o <em>anúncio</em> que leva gente até ele.
+          </h2>
+          <div class="about-text" data-reveal>
             <p>
-              Sou uma desenvolvedora full stack em formação, apaixonada por
-              criar soluções que unem tecnologia, clareza e boas experiências.
+              Sou desenvolvedora web em formação e também trabalho com tráfego
+              pago. Na prática, consigo pensar o site e a campanha juntos: onde
+              a pessoa chega, o que ela vê e por onde ela fala com você.
             </p>
             <p>
-              Do conceito ao deploy, construo aplicações escaláveis, responsivas
-              e que resolvem problemas reais.
+              Estudo programação e desenvolvimento web e sou técnica em
+              Informática pelo IFPI. No dia a dia de código uso IA (o que
+              chamam de vibe coding) para prototipar e construir mais rápido.
             </p>
+            <p>
+              No tráfego pago, trabalho com Meta Ads: estrutura de campanhas,
+              público, criativos, captação de leads pelo WhatsApp e análise de
+              métricas.
+            </p>
+
+            <h3 class="mini-title">Formação</h3>
+            <ul class="timeline">
+              <li>
+                <b>2025</b>
+                <div>
+                  <span>Técnico em Informática</span>
+                  <small>IFPI Campus Oeiras · Conclusão: 2025</small>
+                </div>
+              </li>
+              <li>
+                <b>Em andamento</b>
+                <div>
+                  <span>Programação e Desenvolvimento Web</span>
+                  <small>Formação em andamento</small>
+                </div>
+              </li>
+              <li>
+                <b>2023</b>
+                <div>
+                  <span
+                    >Técnico em Administração integrado ao Ensino Médio</span
+                  >
+                  <small>IFPI Campus Oeiras · Conclusão: 2023</small>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
-      <section class="section purple" id="tecnologias">
+
+      <!-- HABILIDADES -->
+      <section class="section alt" id="habilidades">
         <div class="container">
-          <p class="section-label">02 / TECNOLOGIAS</p>
-          <h2>Minha caixa de<br /><em>ferramentas.</em></h2>
+          <p class="section-label" data-reveal><span>02</span> Habilidades</p>
+          <h2 class="section-title" data-reveal>
+            Código de um lado, <em>campanhas</em> do outro.
+          </h2>
+
           <div class="skills">
-            <article>
-              <span>01</span>
-              <h3>Frontend</h3>
-              <p>Next.js · React · TypeScript<br />JavaScript · HTML5 · CSS3</p>
+            <article class="skill-col" data-reveal>
+              <h3>Desenvolvimento web</h3>
+              <dl>
+                <div>
+                  <dt>Front-end</dt>
+                  <dd>HTML · CSS · JavaScript · TypeScript · React · Next.js</dd>
+                </div>
+                <div>
+                  <dt>Back-end e dados</dt>
+                  <dd>Node.js · APIs · Prisma · PostgreSQL · MySQL · SQLite</dd>
+                </div>
+                <div>
+                  <dt>Deploy e ferramentas</dt>
+                  <dd>
+                    Git/GitHub · Vercel · Railway · Cloudinary · Postman · Figma
+                  </dd>
+                </div>
+              </dl>
             </article>
-            <article>
-              <span>02</span>
-              <h3>Backend</h3>
-              <p>Node.js · Next.js API<br />Prisma</p>
-            </article>
-            <article>
-              <span>03</span>
-              <h3>Banco de dados</h3>
-              <p>PostgreSQL · MySQL<br />SQLite · phpMyAdmin</p>
-            </article>
-            <article>
-              <span>04</span>
-              <h3>Ferramentas</h3>
-              <p>Git · GitHub · Postman<br />Cloudinary · Railway · Figma</p>
+
+            <article class="skill-col skill-col-accent" data-reveal>
+              <h3>Marketing e tráfego pago</h3>
+              <dl>
+                <div>
+                  <dt>Plataformas</dt>
+                  <dd>
+                    Meta Ads · Facebook Ads · Instagram Ads · Gerenciador de
+                    Anúncios
+                  </dd>
+                </div>
+                <div>
+                  <dt>Campanhas</dt>
+                  <dd>
+                    Estruturação de campanhas · Definição de público · Geração
+                    de leads · Captação via WhatsApp · Remarketing
+                  </dd>
+                </div>
+                <div>
+                  <dt>Análise</dt>
+                  <dd>
+                    Criativos e testes · Análise de métricas · Estratégia de
+                    aquisição
+                  </dd>
+                </div>
+              </dl>
             </article>
           </div>
+
+          <div class="offer" data-reveal>
+            <h3 class="mini-title">O que posso fazer por você</h3>
+            <ul>
+              <li>
+                <span>Sites e landing pages</span>
+                <p>Páginas modernas, responsivas e orientadas a conversão.</p>
+              </li>
+              <li>
+                <span>Aplicações web</span>
+                <p>
+                  Soluções completas com frontend, backend e banco de dados.
+                </p>
+              </li>
+              <li>
+                <span>Interfaces e protótipos</span>
+                <p>
+                  Experiências intuitivas, desenhadas no Figma antes do código.
+                </p>
+              </li>
+            </ul>
+          </div>
         </div>
-        <!-- e-commerce(loja de roupas), sistema de agendamento e sistema de restaurante -->
       </section>
+
+      <!-- PROJETOS -->
       <section class="section container" id="projetos">
-        <p class="section-label">03 / PROJETOS</p>
-        <div class="heading">
-          <h2>Projetos em<br /><em>destaque.</em></h2>
+        <p class="section-label" data-reveal><span>03</span> Projetos</p>
+        <div class="heading" data-reveal>
+          <h2 class="section-title">
+            Alguns projetos <em>que já fiz.</em>
+          </h2>
           <a
             class="text-link"
             href="https://github.com/nicole-m0"
             target="_blank"
             rel="noopener"
-            >Ver GitHub <i class="fa-brands fa-github"></i
-          ></a>
-        </div>
-        <div class="projects">
-          <a
-            href="https://pageonixstudio.wixsite.com/medportal"
-            target="_blank"
-            rel="noopener"
-            class="project feature"
-            ><div class="art medical">
-              <i class="fa-solid fa-heart-pulse"></i>
-            </div>
-            <p>WEB DESIGN</p>
-            <h3>
-              MedPortal
-              <i class="fa-solid fa-arrow-up-right-from-square"></i></h3></a
-          ><a
-            href="https://pageonixstudio.wixsite.com/lookshop"
-            target="_blank"
-            rel="noopener"
-            class="project"
-            ><div class="art shop">
-              <i class="fa-solid fa-bag-shopping"></i>
-            </div>
-            <p>E-COMMERCE</p>
-            <h3>
-              Look Shop
-              <i class="fa-solid fa-arrow-up-right-from-square"></i></h3></a
-          ><a
-            href="https://pageonixstudio.wixsite.com/nuance-tech"
-            target="_blank"
-            rel="noopener"
-            class="project"
-            ><div class="art tech"><i class="fa-solid fa-code"></i></div>
-            <p>PORTFÓLIO</p>
-            <h3>
-              Nuance Tech
-              <i class="fa-solid fa-arrow-up-right-from-square"></i></h3
-          ></a>
-        </div>
-      </section>
-      <section class="section purple" id="servicos">
-        <div class="container">
-          <p class="section-label">04 / SERVIÇOS</p>
-          <div class="two-columns">
-            <h2>Como posso<br /><em>te ajudar.</em></h2>
-            <div class="service-list">
-              <article>
-                <span>01</span>
-                <div>
-                  <h3>Sites e landing pages</h3>
-                  <p>Páginas modernas, responsivas e orientadas a conversão.</p>
-                </div>
-              </article>
-              <article>
-                <span>02</span>
-                <div>
-                  <h3>Aplicações web</h3>
-                  <p>
-                    Soluções completas com frontend, backend e banco de dados.
-                  </p>
-                </div>
-              </article>
-              <article>
-                <span>03</span>
-                <div>
-                  <h3>Interfaces e protótipos</h3>
-                  <p>
-                    Experiências intuitivas, desenhadas no Figma antes do
-                    código.
-                  </p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section container" id="trajetoria">
-        <p class="section-label">05 / FORMAÇÃO</p>
-        <div class="two-columns">
-          <h2>Construindo uma<br /><em>trajetória sólida.</em></h2>
-          <div class="education">
-            <article>
-              <b>2025</b>
-              <div>
-                <h3>Técnico em Informática</h3>
-                <p>IFPI Campus Oeiras · Conclusão: 2025</p>
-              </div>
-            </article>
-            <article>
-              <b>EM ANDAMENTO</b>
-              <div>
-                <h3>Programação e Desenvolvimento Web</h3>
-                <p>Formação em andamento</p>
-              </div>
-            </article>
-            <article>
-              <b>2023</b>
-              <div>
-                <h3>Técnico em Administração integrado ao Ensino Médio</h3>
-                <p>IFPI Campus Oeiras · Conclusão: 2023</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section class="contact container" id="contato">
-        <p class="section-label">06 / CONTATO</p>
-        <h2>Vamos criar algo<br /><em>incrível juntas?</em></h2>
-        <p>
-          Tem um projeto, uma oportunidade ou uma ideia? Meu inbox está aberto.
-        </p>
-        <div class="contact-actions">
-          <a
-            class="button primary"
-            href="https://wa.me/5589994549682"
-            target="_blank"
-            rel="noopener"
-            ><i class="fa-brands fa-whatsapp"></i> Chamar no WhatsApp</a
-          ><a class="button outline" href="mailto:nicolemendes.dev@gmail.com"
-            ><i class="fa-regular fa-envelope"></i> Enviar e-mail</a
+            >Ver GitHub <i class="fa-brands fa-github" aria-hidden="true"></i
+            ><span class="sr-only"> (abre em nova aba)</span></a
           >
         </div>
+
+        <ol class="projects">
+          <!-- CONFIRMAR com a Nicole: participação e problema de cada projeto. -->
+          <li class="project" data-reveal>
+            <a
+              class="project-media"
+              href="https://pageonixstudio.wixsite.com/medportal"
+              target="_blank"
+              rel="noopener"
+              tabindex="-1"
+              aria-hidden="true"
+            >
+              <img
+                src="assets/img/projetos/medportal.jpg"
+                width="1440"
+                height="810"
+                alt=""
+                loading="lazy"
+              />
+            </a>
+            <div class="project-info">
+              <p class="project-meta"><span>01</span> Web design</p>
+              <h3>MedPortal</h3>
+              <p>
+                Site institucional de uma clínica médica: apresenta os serviços
+                e leva o visitante direto ao agendamento de consulta.
+              </p>
+              <dl>
+                <div>
+                  <dt>Tecnologias</dt>
+                  <dd>Wix</dd>
+                </div>
+                <div>
+                  <dt>Minha participação</dt>
+                  <dd>Design e construção do site</dd>
+                </div>
+              </dl>
+              <a
+                class="text-link"
+                href="https://pageonixstudio.wixsite.com/medportal"
+                target="_blank"
+                rel="noopener"
+                >Ver projeto <span aria-hidden="true">↗</span
+                ><span class="sr-only"> MedPortal (abre em nova aba)</span></a
+              >
+            </div>
+          </li>
+
+          <li class="project" data-reveal>
+            <a
+              class="project-media"
+              href="https://pageonixstudio.wixsite.com/lookshop"
+              target="_blank"
+              rel="noopener"
+              tabindex="-1"
+              aria-hidden="true"
+            >
+              <img
+                src="assets/img/projetos/lookshop.jpg"
+                width="1440"
+                height="810"
+                alt=""
+                loading="lazy"
+              />
+            </a>
+            <div class="project-info">
+              <p class="project-meta"><span>02</span> E-commerce</p>
+              <h3>Look Shop</h3>
+              <p>
+                Loja virtual de roupas com o catálogo organizado por categoria
+                (feminino, masculino, acessórios e ofertas).
+              </p>
+              <dl>
+                <div>
+                  <dt>Tecnologias</dt>
+                  <dd>Wix</dd>
+                </div>
+                <div>
+                  <dt>Minha participação</dt>
+                  <dd>Design e construção da loja</dd>
+                </div>
+              </dl>
+              <a
+                class="text-link"
+                href="https://pageonixstudio.wixsite.com/lookshop"
+                target="_blank"
+                rel="noopener"
+                >Ver projeto <span aria-hidden="true">↗</span
+                ><span class="sr-only"> Look Shop (abre em nova aba)</span></a
+              >
+            </div>
+          </li>
+
+          <li class="project" data-reveal>
+            <a
+              class="project-media"
+              href="https://pageonixstudio.wixsite.com/nuance-tech"
+              target="_blank"
+              rel="noopener"
+              tabindex="-1"
+              aria-hidden="true"
+            >
+              <img
+                src="assets/img/projetos/nuance-tech.jpg"
+                width="1440"
+                height="810"
+                alt=""
+                loading="lazy"
+              />
+            </a>
+            <div class="project-info">
+              <p class="project-meta"><span>03</span> Portfólio</p>
+              <h3>Nuance Tech</h3>
+              <p>
+                Site de apresentação para uma empresa de software, com foco em
+                mostrar o trabalho e receber pedidos de contato.
+              </p>
+              <dl>
+                <div>
+                  <dt>Tecnologias</dt>
+                  <dd>Wix</dd>
+                </div>
+                <div>
+                  <dt>Minha participação</dt>
+                  <dd>Design e construção do site</dd>
+                </div>
+              </dl>
+              <a
+                class="text-link"
+                href="https://pageonixstudio.wixsite.com/nuance-tech"
+                target="_blank"
+                rel="noopener"
+                >Ver projeto <span aria-hidden="true">↗</span
+                ><span class="sr-only"> Nuance Tech (abre em nova aba)</span></a
+              >
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- TRÁFEGO PAGO -->
+      <section class="section alt" id="trafego">
+        <div class="container">
+          <p class="section-label" data-reveal><span>04</span> Tráfego Pago</p>
+          <div class="traffic">
+            <div data-reveal>
+              <h2 class="section-title">
+                Do anúncio ao <em>WhatsApp.</em>
+              </h2>
+              <p>
+                Além de programar, gerencio campanhas no Meta Ads (Facebook e
+                Instagram). O foco é gerar leads e conversas no WhatsApp, atrair
+                clientes para o negócio e acompanhar os números para saber o
+                que ajustar.
+              </p>
+              <p>
+                Como também desenvolvo, consigo construir a página para onde o
+                anúncio leva, e não depender de terceiros para isso.
+              </p>
+            </div>
+            <ol class="steps" data-reveal>
+              <li>
+                <b>01</b>
+                <div>
+                  <span>Entender o negócio</span>
+                  <p>Objetivo da campanha, público e o que já existe pronto.</p>
+                </div>
+              </li>
+              <li>
+                <b>02</b>
+                <div>
+                  <span>Estruturar</span>
+                  <p>Campanhas, públicos e criativos no Gerenciador de Anúncios.</p>
+                </div>
+              </li>
+              <li>
+                <b>03</b>
+                <div>
+                  <span>Testar e acompanhar</span>
+                  <p>Variações de criativo, remarketing e leitura das métricas.</p>
+                </div>
+              </li>
+              <li>
+                <b>04</b>
+                <div>
+                  <span>Ajustar</span>
+                  <p>Decisões baseadas nos números, não no palpite.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTATO -->
+      <section class="contact container" id="contato">
+        <div class="contact-text" data-reveal>
+          <p class="section-label"><span>05</span> Contato</p>
+          <h2 class="contact-title">Vamos <em>conversar?</em></h2>
+          <p>
+            Tem um site para fazer, uma campanha para estruturar ou só uma
+            dúvida? Me chama por onde for mais fácil.
+          </p>
+          <div class="contact-actions">
+            <a
+              class="button primary"
+              href="https://wa.me/5589994549682"
+              target="_blank"
+              rel="noopener"
+              ><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Chamar
+              no WhatsApp<span class="sr-only"> (abre em nova aba)</span></a
+            >
+            <a class="button outline" href="mailto:nicolemendes.dev@gmail.com"
+              ><i class="fa-regular fa-envelope" aria-hidden="true"></i> Enviar
+              e-mail</a
+            >
+          </div>
+          <p class="contact-mail">nicolemendes.dev@gmail.com</p>
+        </div>
+        <figure class="contact-photo" data-reveal>
+          <img
+            src="assets/img/nicole-tablet.jpg"
+            width="1066"
+            height="1450"
+            alt="Nicole Mendes sentada em uma poltrona branca, de terno azul, olhando para um tablet."
+            loading="lazy"
+          />
+        </figure>
       </section>
     </main>
-    <footer class="container">
-      <a class="brand" href="#inicio">NM<span>.</span></a>
-      <p>© 2026 Nicole Mendes</p>
-      <a href="https://github.com/nicole-m0" target="_blank" rel="noopener"
-        >GitHub <i class="fa-brands fa-github"></i
-      ></a>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <a class="brand" href="#inicio" aria-label="Nicole Mendes, início"
+          >NM<span>.</span></a
+        >
+        <p>© 2026 Nicole Mendes</p>
+        <a href="https://github.com/nicole-m0" target="_blank" rel="noopener"
+          >GitHub <i class="fa-brands fa-github" aria-hidden="true"></i
+          ><span class="sr-only"> (abre em nova aba)</span></a
+        >
+      </div>
     </footer>
     <script src="script.js"></script>
   </body>

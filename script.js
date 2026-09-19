@@ -5,11 +5,23 @@ const reduceMotion = window.matchMedia(
   "(prefers-reduced-motion: reduce)",
 ).matches;
 
-document.body.classList.add("js-enabled");
+function closeMenu() {
+  menu.classList.remove("active");
+  btn.setAttribute("aria-expanded", "false");
+  btn.setAttribute("aria-label", "Abrir menu");
+}
 
 btn.addEventListener("click", () => {
-  menu.classList.toggle("active");
-  btn.setAttribute("aria-expanded", menu.classList.contains("active"));
+  const open = menu.classList.toggle("active");
+  btn.setAttribute("aria-expanded", String(open));
+  btn.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && menu.classList.contains("active")) {
+    closeMenu();
+    btn.focus();
+  }
 });
 
 links.forEach((link) => {
@@ -18,48 +30,61 @@ links.forEach((link) => {
     const target = document.querySelector(this.getAttribute("href"));
 
     if (target) {
-      menu.classList.remove("active");
-      btn.setAttribute("aria-expanded", "false");
+      closeMenu();
       target.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" });
+      history.replaceState(null, "", this.getAttribute("href"));
     }
   });
 });
 
-if (!reduceMotion) {
-  const revealItems = document.querySelectorAll(
-    ".section-label, .two-columns, .skills article, .project, .service-list article, .education article, .contact > *",
-  );
+// Reveal ao rolar: só entra em ação se o usuário não pediu menos movimento
+// (a classe js-reveal é adicionada no <head>).
+const revealItems = document.querySelectorAll("[data-reveal]");
 
-  revealItems.forEach((item, index) => {
-    item.classList.add("reveal");
-    item.style.transitionDelay = `${(index % 4) * 90}ms`;
-  });
-
-  const observer = new IntersectionObserver(
+if (
+  document.documentElement.classList.contains("js-reveal") &&
+  "IntersectionObserver" in window
+) {
+  const revealObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
+          revealObserver.unobserve(entry.target);
         }
       });
     },
-    { threshold: 0.14 },
+    { threshold: 0.12 },
   );
 
-  revealItems.forEach((item) => observer.observe(item));
+  revealItems.forEach((item) => revealObserver.observe(item));
+} else {
+  revealItems.forEach((item) => item.classList.add("is-visible"));
+}
 
-  document.querySelectorAll(".project").forEach((project) => {
-    project.addEventListener("pointermove", (event) => {
-      const rect = project.getBoundingClientRect();
-      project.style.setProperty("--x", `${event.clientX - rect.left}px`);
-      project.style.setProperty("--y", `${event.clientY - rect.top}px`);
-    });
-  });
+// Destaca no menu a seção que está na tela.
+const sections = [...document.querySelectorAll("main section[id]")];
+const linkFor = (id) => document.querySelector(`nav a[href="#${id}"]`);
+
+if ("IntersectionObserver" in window) {
+  const navObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        links.forEach((link) => link.removeAttribute("aria-current"));
+        const active = linkFor(entry.target.id);
+        if (active) active.setAttribute("aria-current", "true");
+      });
+    },
+    { rootMargin: "-45% 0px -50% 0px" },
+  );
+
+  sections.forEach((section) => navObserver.observe(section));
 }
 
 const progress = document.createElement("div");
 progress.className = "reading-progress";
+progress.setAttribute("aria-hidden", "true");
 document.body.append(progress);
 
 window.addEventListener(
