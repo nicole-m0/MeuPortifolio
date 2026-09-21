@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="color-scheme" content="dark" />
-    <meta name="theme-color" content="#0a0d14" />
+    <meta name="theme-color" content="#0e0a26" />
     <meta
       name="description"
       content="Nicole Mendes: desenvolvedora web, vibe coder e gestora de tráfego pago. Sites, aplicações web e campanhas no Meta Ads."
@@ -21,7 +21,7 @@
     <title>Nicole Mendes | Desenvolvedora Web e Tráfego Pago</title>
     <link
       rel="icon"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0d14'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' font-weight='700' text-anchor='middle' fill='%235b8cff'%3ENM%3C/text%3E%3C/svg%3E"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230e0a26'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' font-weight='700' text-anchor='middle' fill='%23ffc629'%3ENM%3C/text%3E%3C/svg%3E"
     />
     <script>
       if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
@@ -31,7 +31,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -70,8 +70,27 @@
 
     <main id="conteudo">
       <!-- INÍCIO -->
-      <section class="hero container" id="inicio">
+      <section class="hero" id="inicio">
+        <figure class="hero-photo hero-in">
+          <img
+            src="assets/img/nicole-hero.jpg"
+            width="1100"
+            height="1270"
+            alt="Retrato em preto e branco de Nicole Mendes, de cabelo comprido e blazer escuro, sentada com as mãos sobre o joelho."
+            fetchpriority="high"
+          />
+          <span class="hero-tag" aria-hidden="true">Nicole Mendes / 2026</span>
+        </figure>
+
         <div class="hero-text">
+          <svg
+            class="hero-ring"
+            viewBox="0 0 400 400"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <circle cx="200" cy="200" r="198" />
+          </svg>
           <p class="eyebrow hero-in">
             <span class="dot" aria-hidden="true"></span> Disponível para novos
             projetos
@@ -94,46 +113,61 @@
               ><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Falar
               comigo<span class="sr-only"> no WhatsApp (abre em nova aba)</span></a
             >
-            <a class="text-link" href="mailto:nicolemendes.dev@gmail.com"
+            <a class="button outline" href="mailto:nicolemendes.dev@gmail.com"
               >nicolemendes.dev@gmail.com</a
             >
           </div>
         </div>
-        <figure class="hero-photo hero-in">
-          <img
-            src="assets/img/nicole-retrato.jpg"
-            width="1100"
-            height="1305"
-            alt="Retrato em preto e branco de Nicole Mendes, de cabelo comprido, sentada com um blazer escuro."
-            fetchpriority="high"
-          />
-        </figure>
       </section>
 
       <!-- SOBRE -->
       <section class="section container" id="sobre">
         <p class="section-label" data-reveal><span>01</span> Sobre</p>
-        <div class="about">
-          <h2 data-reveal>
-            Faço o site e também o <em>anúncio</em> que leva gente até ele.
-          </h2>
-          <div class="about-text" data-reveal>
+        <h2 class="section-title about-title" data-reveal>
+          Faço o site e também o <em>anúncio</em> que leva gente até ele.
+        </h2>
+
+        <div class="about-blocks">
+          <article class="about-block" data-reveal>
+            <b class="about-num">01</b>
+            <h3>Site e campanha juntos</h3>
             <p>
               Sou desenvolvedora web em formação e também trabalho com tráfego
               pago. Na prática, consigo pensar o site e a campanha juntos: onde
               a pessoa chega, o que ela vê e por onde ela fala com você.
             </p>
+          </article>
+          <article class="about-block" data-reveal>
+            <b class="about-num">02</b>
+            <h3>Código com IA</h3>
             <p>
               Estudo programação e desenvolvimento web e sou técnica em
               Informática pelo IFPI. No dia a dia de código uso IA (o que
               chamam de vibe coding) para prototipar e construir mais rápido.
             </p>
+          </article>
+          <article class="about-block" data-reveal>
+            <b class="about-num">03</b>
+            <h3>Meta Ads</h3>
             <p>
               No tráfego pago, trabalho com Meta Ads: estrutura de campanhas,
               público, criativos, captação de leads pelo WhatsApp e análise de
               métricas.
             </p>
+          </article>
+        </div>
 
+        <div class="about-row">
+          <figure class="about-photo" data-reveal>
+            <img
+              src="assets/img/nicole-tablet.jpg"
+              width="1066"
+              height="1450"
+              alt="Nicole Mendes sentada em uma poltrona, de terno, olhando para um tablet."
+              loading="lazy"
+            />
+          </figure>
+          <div class="about-edu" data-reveal>
             <h3 class="mini-title">Formação</h3>
             <ul class="timeline">
               <li>
@@ -172,52 +206,81 @@
             Código de um lado, <em>campanhas</em> do outro.
           </h2>
 
-          <div class="skills">
-            <article class="skill-col" data-reveal>
-              <h3>Desenvolvimento web</h3>
-              <dl>
-                <div>
-                  <dt>Front-end</dt>
-                  <dd>HTML · CSS · JavaScript · TypeScript · React · Next.js</dd>
-                </div>
-                <div>
-                  <dt>Back-end e dados</dt>
-                  <dd>Node.js · APIs · Prisma · PostgreSQL · MySQL · SQLite</dd>
-                </div>
-                <div>
-                  <dt>Deploy e ferramentas</dt>
-                  <dd>
-                    Git/GitHub · Vercel · Railway · Cloudinary · Postman · Figma
-                  </dd>
-                </div>
-              </dl>
+          <h3 class="group-title" data-reveal>
+            Desenvolvimento web <small>03 áreas</small>
+          </h3>
+          <div class="skill-grid">
+            <article class="skill-card" data-reveal>
+              <i class="fa-solid fa-code skill-icon" aria-hidden="true"></i>
+              <h4>Front-end</h4>
+              <ul class="chips">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>TypeScript</li>
+                <li>React</li>
+                <li>Next.js</li>
+              </ul>
             </article>
+            <article class="skill-card" data-reveal>
+              <i class="fa-solid fa-database skill-icon" aria-hidden="true"></i>
+              <h4>Back-end e dados</h4>
+              <ul class="chips">
+                <li>Node.js</li>
+                <li>APIs</li>
+                <li>Prisma</li>
+                <li>PostgreSQL</li>
+                <li>MySQL</li>
+                <li>SQLite</li>
+              </ul>
+            </article>
+            <article class="skill-card" data-reveal>
+              <i class="fa-solid fa-rocket skill-icon" aria-hidden="true"></i>
+              <h4>Deploy e ferramentas</h4>
+              <ul class="chips">
+                <li>Git/GitHub</li>
+                <li>Vercel</li>
+                <li>Railway</li>
+                <li>Cloudinary</li>
+                <li>Postman</li>
+                <li>Figma</li>
+              </ul>
+            </article>
+          </div>
 
-            <article class="skill-col skill-col-accent" data-reveal>
-              <h3>Marketing e tráfego pago</h3>
-              <dl>
-                <div>
-                  <dt>Plataformas</dt>
-                  <dd>
-                    Meta Ads · Facebook Ads · Instagram Ads · Gerenciador de
-                    Anúncios
-                  </dd>
-                </div>
-                <div>
-                  <dt>Campanhas</dt>
-                  <dd>
-                    Estruturação de campanhas · Definição de público · Geração
-                    de leads · Captação via WhatsApp · Remarketing
-                  </dd>
-                </div>
-                <div>
-                  <dt>Análise</dt>
-                  <dd>
-                    Criativos e testes · Análise de métricas · Estratégia de
-                    aquisição
-                  </dd>
-                </div>
-              </dl>
+          <h3 class="group-title" data-reveal>
+            Marketing e tráfego pago <small>03 áreas</small>
+          </h3>
+          <div class="skill-grid">
+            <article class="skill-card is-accent" data-reveal>
+              <i class="fa-solid fa-bullhorn skill-icon" aria-hidden="true"></i>
+              <h4>Plataformas</h4>
+              <ul class="chips">
+                <li>Meta Ads</li>
+                <li>Facebook Ads</li>
+                <li>Instagram Ads</li>
+                <li>Gerenciador de Anúncios</li>
+              </ul>
+            </article>
+            <article class="skill-card is-accent" data-reveal>
+              <i class="fa-solid fa-bullseye skill-icon" aria-hidden="true"></i>
+              <h4>Campanhas</h4>
+              <ul class="chips">
+                <li>Estruturação de campanhas</li>
+                <li>Definição de público</li>
+                <li>Geração de leads</li>
+                <li>Captação via WhatsApp</li>
+                <li>Remarketing</li>
+              </ul>
+            </article>
+            <article class="skill-card is-accent" data-reveal>
+              <i class="fa-solid fa-chart-line skill-icon" aria-hidden="true"></i>
+              <h4>Análise</h4>
+              <ul class="chips">
+                <li>Criativos e testes</li>
+                <li>Análise de métricas</li>
+                <li>Estratégia de aquisição</li>
+              </ul>
             </article>
           </div>
 
@@ -225,20 +288,30 @@
             <h3 class="mini-title">O que posso fazer por você</h3>
             <ul>
               <li>
-                <span>Sites e landing pages</span>
-                <p>Páginas modernas, responsivas e orientadas a conversão.</p>
+                <b>01</b>
+                <div>
+                  <span>Sites e landing pages</span>
+                  <p>Páginas modernas, responsivas e orientadas a conversão.</p>
+                </div>
               </li>
               <li>
-                <span>Aplicações web</span>
-                <p>
-                  Soluções completas com frontend, backend e banco de dados.
-                </p>
+                <b>02</b>
+                <div>
+                  <span>Aplicações web</span>
+                  <p>
+                    Soluções completas com frontend, backend e banco de dados.
+                  </p>
+                </div>
               </li>
               <li>
-                <span>Interfaces e protótipos</span>
-                <p>
-                  Experiências intuitivas, desenhadas no Figma antes do código.
-                </p>
+                <b>03</b>
+                <div>
+                  <span>Interfaces e protótipos</span>
+                  <p>
+                    Experiências intuitivas, desenhadas no Figma antes do
+                    código.
+                  </p>
+                </div>
               </li>
             </ul>
           </div>
@@ -250,7 +323,7 @@
         <p class="section-label" data-reveal><span>03</span> Projetos</p>
         <div class="heading" data-reveal>
           <h2 class="section-title">
-            Alguns projetos <em>que já fiz.</em>
+            Projetos em <em>destaque.</em>
           </h2>
           <a
             class="text-link"
@@ -262,143 +335,138 @@
           >
         </div>
 
-        <ol class="projects">
-          <!-- CONFIRMAR com a Nicole: participação e problema de cada projeto. -->
-          <li class="project" data-reveal>
-            <a
-              class="project-media"
-              href="https://pageonixstudio.wixsite.com/medportal"
-              target="_blank"
-              rel="noopener"
-              tabindex="-1"
-              aria-hidden="true"
-            >
+        <div class="work">
+          <!-- 1. Asafe -->
+          <article class="card card-asafe" data-reveal>
+            <div class="card-media">
               <img
-                src="assets/img/projetos/medportal.jpg"
-                width="1440"
-                height="810"
-                alt=""
+                src="assets/img/projetos/asafe-alunos.webp"
+                width="1500"
+                height="694"
+                alt="Tela de alunos do painel administrativo da Associação Asafe: menu lateral, busca, filtros e tabela de alunos com instrumento, professor e status."
                 loading="lazy"
               />
-            </a>
-            <div class="project-info">
-              <p class="project-meta"><span>01</span> Web design</p>
-              <h3>MedPortal</h3>
+              <span class="card-caption">Dados de exemplo</span>
+            </div>
+            <div class="card-body">
+              <p class="card-meta"><span>01</span> Desenvolvimento web · Full-stack</p>
+              <h3>Sistema de Cadastro de Alunos</h3>
+              <p class="card-client">Associação Asafe</p>
               <p>
-                Site institucional de uma clínica médica: apresenta os serviços
-                e leva o visitante direto ao agendamento de consulta.
+                Painel administrativo de uma escola de música para cadastrar e
+                acompanhar alunos e professores.
               </p>
-              <dl>
-                <div>
-                  <dt>Tecnologias</dt>
-                  <dd>Wix</dd>
-                </div>
-                <div>
-                  <dt>Minha participação</dt>
-                  <dd>Design e construção do site</dd>
-                </div>
-              </dl>
+              <ul class="card-points">
+                <li>Sistema de cadastro</li>
+                <li>Interface administrativa</li>
+                <li>Autenticação</li>
+                <li>Organização dos dados</li>
+              </ul>
+              <ul class="chips chips-sm">
+                <li>React</li>
+                <li>TypeScript</li>
+                <li>Node.js</li>
+                <li>Prisma</li>
+                <li>PostgreSQL</li>
+              </ul>
               <a
-                class="text-link"
-                href="https://pageonixstudio.wixsite.com/medportal"
+                class="card-link"
+                href="https://github.com/nicole-m0/sistema-cadastro"
                 target="_blank"
                 rel="noopener"
-                >Ver projeto <span aria-hidden="true">↗</span
-                ><span class="sr-only"> MedPortal (abre em nova aba)</span></a
+                >Ver código <span aria-hidden="true">↗</span
+                ><span class="sr-only">
+                  do Sistema de Cadastro de Alunos (abre em nova aba)</span
+                ></a
               >
             </div>
-          </li>
+          </article>
 
-          <li class="project" data-reveal>
-            <a
-              class="project-media"
-              href="https://pageonixstudio.wixsite.com/lookshop"
-              target="_blank"
-              rel="noopener"
-              tabindex="-1"
-              aria-hidden="true"
-            >
+          <!-- 2. Cofrinanças (aplicativo) -->
+          <article class="card card-cofri" data-reveal>
+            <div class="card-media phones">
               <img
-                src="assets/img/projetos/lookshop.jpg"
-                width="1440"
-                height="810"
-                alt=""
+                class="phone phone-a"
+                src="assets/img/projetos/cofrinancas-painel.webp"
+                width="640"
+                height="1391"
+                alt="Aplicativo Cofrinanças, tela Painel: saldo atual, receitas, despesas e gastos por categoria."
                 loading="lazy"
               />
-            </a>
-            <div class="project-info">
-              <p class="project-meta"><span>02</span> E-commerce</p>
-              <h3>Look Shop</h3>
+              <img
+                class="phone phone-b"
+                src="assets/img/projetos/cofrinancas-metas.webp"
+                width="640"
+                height="1391"
+                alt="Aplicativo Cofrinanças, tela Metas: cartões de metas com barra de progresso."
+                loading="lazy"
+              />
+            </div>
+            <div class="card-body">
+              <p class="card-meta"><span>02</span> Aplicativo · Finanças pessoais</p>
+              <h3>Cofrinanças</h3>
               <p>
-                Loja virtual de roupas com o catálogo organizado por categoria
-                (feminino, masculino, acessórios e ofertas).
+                App mobile de controle de gastos: saldo, receitas e despesas,
+                gastos por categoria, metas e transações, conectado a uma API
+                própria.
               </p>
-              <dl>
-                <div>
-                  <dt>Tecnologias</dt>
-                  <dd>Wix</dd>
-                </div>
-                <div>
-                  <dt>Minha participação</dt>
-                  <dd>Design e construção da loja</dd>
-                </div>
-              </dl>
+              <ul class="chips chips-sm">
+                <li>React Native</li>
+                <li>Expo</li>
+                <li>TypeScript</li>
+                <li>Next.js</li>
+                <li>MySQL</li>
+              </ul>
+              <p class="card-note">Telas do app com dados de exemplo.</p>
               <a
-                class="text-link"
-                href="https://pageonixstudio.wixsite.com/lookshop"
+                class="card-link"
+                href="https://github.com/nicole-m0/cofrinancas-geral"
                 target="_blank"
                 rel="noopener"
-                >Ver projeto <span aria-hidden="true">↗</span
-                ><span class="sr-only"> Look Shop (abre em nova aba)</span></a
+                >Ver código <span aria-hidden="true">↗</span
+                ><span class="sr-only"> do Cofrinanças (abre em nova aba)</span></a
               >
             </div>
-          </li>
+          </article>
 
-          <li class="project" data-reveal>
-            <a
-              class="project-media"
-              href="https://pageonixstudio.wixsite.com/nuance-tech"
-              target="_blank"
-              rel="noopener"
-              tabindex="-1"
-              aria-hidden="true"
-            >
+          <!-- 3. Media Kit -->
+          <article class="card card-mk" data-reveal>
+            <div class="card-media">
               <img
-                src="assets/img/projetos/nuance-tech.jpg"
-                width="1440"
-                height="810"
-                alt=""
+                src="assets/img/projetos/mediakit-hero.webp"
+                width="1500"
+                height="937"
+                alt="Media kit de Débora Tenório: título, frase de apresentação, botões de contato e retrato dela segurando um celular."
                 loading="lazy"
               />
-            </a>
-            <div class="project-info">
-              <p class="project-meta"><span>03</span> Portfólio</p>
-              <h3>Nuance Tech</h3>
+            </div>
+            <div class="card-body">
+              <p class="card-meta"><span>03</span> Presença digital · Media kit</p>
+              <h3>Media Kit <br />Débora Tenório</h3>
               <p>
-                Site de apresentação para uma empresa de software, com foco em
-                mostrar o trabalho e receber pedidos de contato.
+                Landing page que apresenta a criadora de conteúdo de Oeiras, PI:
+                perfil, formatos de divulgação e trabalhos realizados, com
+                contato direto por WhatsApp.
               </p>
-              <dl>
-                <div>
-                  <dt>Tecnologias</dt>
-                  <dd>Wix</dd>
-                </div>
-                <div>
-                  <dt>Minha participação</dt>
-                  <dd>Design e construção do site</dd>
-                </div>
-              </dl>
+              <ul class="chips chips-sm">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Vercel</li>
+              </ul>
               <a
-                class="text-link"
-                href="https://pageonixstudio.wixsite.com/nuance-tech"
+                class="card-link"
+                href="https://mediakit-debten.vercel.app"
                 target="_blank"
                 rel="noopener"
-                >Ver projeto <span aria-hidden="true">↗</span
-                ><span class="sr-only"> Nuance Tech (abre em nova aba)</span></a
+                >Ver site <span aria-hidden="true">↗</span
+                ><span class="sr-only">
+                  do Media Kit Débora Tenório (abre em nova aba)</span
+                ></a
               >
             </div>
-          </li>
-        </ol>
+          </article>
+        </div>
       </section>
 
       <!-- TRÁFEGO PAGO -->
@@ -433,7 +501,9 @@
                 <b>02</b>
                 <div>
                   <span>Estruturar</span>
-                  <p>Campanhas, públicos e criativos no Gerenciador de Anúncios.</p>
+                  <p>
+                    Campanhas, públicos e criativos no Gerenciador de Anúncios.
+                  </p>
                 </div>
               </li>
               <li>
@@ -457,38 +527,37 @@
 
       <!-- CONTATO -->
       <section class="contact container" id="contato">
-        <div class="contact-text" data-reveal>
+        <div class="contact-block" data-reveal>
+          <svg
+            class="contact-ring"
+            viewBox="0 0 400 400"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <circle cx="200" cy="200" r="198" />
+          </svg>
           <p class="section-label"><span>05</span> Contato</p>
-          <h2 class="contact-title">Vamos <em>conversar?</em></h2>
-          <p>
+          <h2 class="contact-title">Vamos criar <br />algo <em>juntos?</em></h2>
+          <p class="contact-lead">
             Tem um site para fazer, uma campanha para estruturar ou só uma
             dúvida? Me chama por onde for mais fácil.
           </p>
           <div class="contact-actions">
             <a
-              class="button primary"
+              class="button dark"
               href="https://wa.me/5589994549682"
               target="_blank"
               rel="noopener"
               ><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Chamar
               no WhatsApp<span class="sr-only"> (abre em nova aba)</span></a
             >
-            <a class="button outline" href="mailto:nicolemendes.dev@gmail.com"
+            <a class="button dark-outline" href="mailto:nicolemendes.dev@gmail.com"
               ><i class="fa-regular fa-envelope" aria-hidden="true"></i> Enviar
               e-mail</a
             >
           </div>
           <p class="contact-mail">nicolemendes.dev@gmail.com</p>
         </div>
-        <figure class="contact-photo" data-reveal>
-          <img
-            src="assets/img/nicole-tablet.jpg"
-            width="1066"
-            height="1450"
-            alt="Nicole Mendes sentada em uma poltrona branca, de terno azul, olhando para um tablet."
-            loading="lazy"
-          />
-        </figure>
       </section>
     </main>
 
